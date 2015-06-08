@@ -1,0 +1,5 @@
+2015-05-21 6:07:52 - PHP Notice:  Undefined index: email in /home/dothotuo/public_html/catalog/controller/module/pavnewsletter.php on line 66
+2015-05-21 6:07:52 - PHP Notice:  Undefined index: email in /home/dothotuo/public_html/catalog/controller/module/pavnewsletter.php on line 68
+2015-05-21 6:07:52 - PHP Notice:  Undefined index: email in /home/dothotuo/public_html/catalog/controller/module/pavnewsletter.php on line 69
+2015-06-01 15:22:36 - PHP Notice:  Undefined index: status in /var/www/html/dothotuongphat2/admin/view/template/module/pavmap/module.tpl on line 99
+2015-06-02 11:00:39 - PHP Notice:  Undefined index: status in /var/www/html/dothotuongphat2/admin/view/template/module/pavmap/module.tpl on line 99

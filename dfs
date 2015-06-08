@@ -1,0 +1,344 @@
+[33mcommit a1d320390818ae2a5274b08567cc1ae53e396ee2[m
+Author: Khien Pham <pckhien@gmail.com>
+Date:   Mon Jun 8 09:42:37 2015 +0700
+
+    first
+
+[1mdiff --git a/.DS_Store b/.DS_Store[m
+[1mnew file mode 100755[m
+[1mindex 0000000..fdb5047[m
+Binary files /dev/null and b/.DS_Store differ
+[1mdiff --git a/.htaccess.txt b/.htaccess.txt[m
+[1mnew file mode 100755[m
+[1mindex 0000000..123bd4e[m
+[1m--- /dev/null[m
+[1m+++ b/.htaccess.txt[m
+[36m@@ -0,0 +1,54 @@[m
+[32m+[m[32m# 1.To use URL Alias you need to be running apache with mod_rewrite enabled.[m[41m [m
+[32m+[m
+[32m+[m[32m# 2. In your opencart directory rename htaccess.txt to .htaccess.[m
+[32m+[m
+[32m+[m[32m# For any support issues please visit: http://www.opencart.com[m
+[32m+[m
+[32m+[m[32mOptions +FollowSymlinks[m
+[32m+[m
+[32m+[m[32m# Prevent Directoy listing[m[41m [m
+[32m+[m[32mOptions -Indexes[m
+[32m+[m
+[32m+[m[32m# Prevent Direct Access to files[m
+[32m+[m[32m<FilesMatch "(?i)((\.tpl|\.ini|\.log|(?<!robots)\.txt))">[m
+[32m+[m[32m Order deny,allow[m
+[32m+[m[32m Deny from all[m
+[32m+[m[32m</FilesMatch>[m
+[32m+[m
+[32m+[m[32m# SEO URL Settings[m
+[32m+[m[32mRewriteEngine On[m
+[32m+[m[32m# If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/[m[41m [m
+[32m+[m
+[32m+[m[32mRewriteBase /[m
+[32m+[m[32mRewriteRule ^sitemap.xml$ index.php?route=feed/google_sitemap [L][m
+[32m+[m[32mRewriteRule ^googlebase.xml$ index.php?route=feed/google_base [L][m
+[32m+[m[32mRewriteRule ^download/(.*) /index.php?route=error/not_found [L][m
+[32m+[m[32mRewriteCond %{REQUEST_FILENAME} !-f[m
+[32m+[m[32mRewriteCond %{REQUEST_FILENAME} !-d[m
+[32m+[m[32mRewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)[m
+[32m+[m[32mRewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA][m
+[32m+[m
+[32m+[m[32m### Additional Settings that may need to be enabled for some servers[m[41m [m
+[32m+[m[32m### Uncomment the commands by removing the # sign in front of it.[m
+[32m+[m[32m### If you get an "Internal Server Error 500" after enabling any of the following settings, restore the # as this means your host doesn't allow that.[m
+[32m+[m
+[32m+[m[32m# 1. If your cart only allows you to add one item at a time, it is possible register_globals is on. This may work to disable it:[m
+[32m+[m[32m# php_flag register_globals off[m
+[32m+[m
+[32m+[m[32m# 2. If your cart has magic quotes enabled, This may work to disable it:[m
+[32m+[m[32m# php_flag magic_quotes_gpc Off[m
+[32m+[m
+[32m+[m[32m# 3. Set max upload file size. Most hosts will limit this and not allow it to be overridden but you can try[m
+[32m+[m[32m# php_value upload_max_filesize 999M[m
+[32m+[m
+[32m+[m[32m# 4. set max post size. uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields[m
+[32m+[m[32m# php_value post_max_size 999M[m
+[32m+[m
+[32m+[m[32m# 5. set max time script can take. uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields[m
+[32m+[m[32m# php_value max_execution_time 200[m
+[32m+[m
+[32m+[m[32m# 6. set max time for input to be recieved. Uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields[m
+[32m+[m[32m# php_value max_input_time 200[m
+[32m+[m
+[32m+[m[32m# 7. disable open_basedir limitations[m
+[32m+[m[32m# php_admin_value open_basedir none[m
+[1mdiff --git a/0.Backup sau khi cai dat/DB/localhost.sql.zip b/0.Backup sau khi cai dat/DB/localhost.sql.zip[m
+[1mnew file mode 100755[m
+[1mindex 0000000..bb316ca[m
+Binary files /dev/null and b/0.Backup sau khi cai dat/DB/localhost.sql.zip differ
+[1mdiff --git a/0.Backup sau khi cai dat/admin/.DS_Store b/0.Backup sau khi cai dat/admin/.DS_Store[m
+[1mnew file mode 100755[m
+[1mindex 0000000..b6bd9fe[m
+Binary files /dev/null and b/0.Backup sau khi cai dat/admin/.DS_Store differ
+[1mdiff --git a/0.Backup sau khi cai dat/admin/config.php b/0.Backup sau khi cai dat/admin/config.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..222392f[m
+[1m--- /dev/null[m
+[1m+++ b/0.Backup sau khi cai dat/admin/config.php[m	
+[36m@@ -0,0 +1,30 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32m// HTTP[m
+[32m+[m[32mdefine('HTTP_SERVER', 'http://dothotuongphat.com/admin/');[m
+[32m+[m[32mdefine('HTTP_CATALOG', 'http://dothotuongphat.com/');[m
+[32m+[m
+[32m+[m[32m// HTTPS[m
+[32m+[m[32mdefine('HTTPS_SERVER', 'http://dothotuongphat.com/admin/');[m
+[32m+[m[32mdefine('HTTPS_CATALOG', 'http://dothotuongphat.com/');[m
+[32m+[m
+[32m+[m[32m// DIR[m
+[32m+[m[32mdefine('DIR_APPLICATION', '/home/dothotuo/public_html/admin/');[m
+[32m+[m[32mdefine('DIR_SYSTEM', '/home/dothotuo/public_html/system/');[m
+[32m+[m[32mdefine('DIR_LANGUAGE', '/home/dothotuo/public_html/admin/language/');[m
+[32m+[m[32mdefine('DIR_TEMPLATE', '/home/dothotuo/public_html/admin/view/template/');[m
+[32m+[m[32mdefine('DIR_CONFIG', '/home/dothotuo/public_html/system/config/');[m
+[32m+[m[32mdefine('DIR_IMAGE', '/home/dothotuo/public_html/image/');[m
+[32m+[m[32mdefine('DIR_CACHE', '/home/dothotuo/public_html/system/cache/');[m
+[32m+[m[32mdefine('DIR_DOWNLOAD', '/home/dothotuo/public_html/system/download/');[m
+[32m+[m[32mdefine('DIR_UPLOAD', '/home/dothotuo/public_html/system/upload/');[m
+[32m+[m[32mdefine('DIR_LOGS', '/home/dothotuo/public_html/system/logs/');[m
+[32m+[m[32mdefine('DIR_MODIFICATION', '/home/dothotuo/public_html/system/modification/');[m
+[32m+[m[32mdefine('DIR_CATALOG', '/home/dothotuo/public_html/catalog/');[m
+[32m+[m
+[32m+[m[32m// DB[m
+[32m+[m[32mdefine('DB_DRIVER', 'mysqli');[m
+[32m+[m[32mdefine('DB_HOSTNAME', 'localhost');[m
+[32m+[m[32mdefine('DB_USERNAME', 'dothotuo_admin');[m
+[32m+[m[32mdefine('DB_PASSWORD', 'N#-Ts^-q6mJn');[m
+[32m+[m[32mdefine('DB_DATABASE', 'dothotuo_global');[m
+[32m+[m[32mdefine('DB_PREFIX', 'ws_');[m
+[1mdiff --git a/0.Backup sau khi cai dat/admin/controller/catalog/attribute.php b/0.Backup sau khi cai dat/admin/controller/catalog/attribute.php[m
+[1mnew file mode 100755[m
+[1mindex 0000000..cc00b6b[m
+[1m--- /dev/null[m
+[1m+++ b/0.Backup sau khi cai dat/admin/controller/catalog/attribute.php[m	
+[36m@@ -0,0 +1,432 @@[m
+[32m+[m[32m<?php[m
+[32m+[m[32mclass ControllerCatalogAttribute extends Controller {[m
+[32m+[m	[32mprivate $error = array();[m
+[32m+[m
+[32m+[m	[32mpublic function index() {[m
+[32m+[m		[32m$this->load->language('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32m$this->document->setTitle($this->language->get('heading_title'));[m
+[32m+[m
+[32m+[m		[32m$this->load->model('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32m$this->getList();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic function add() {[m
+[32m+[m		[32m$this->load->language('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32m$this->document->setTitle($this->language->get('heading_title'));[m
+[32m+[m
+[32m+[m		[32m$this->load->model('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32mif (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {[m
+[32m+[m			[32m$this->model_catalog_attribute->addAttribute($this->request->post);[m
+[32m+[m
+[32m+[m			[32m$this->session->data['success'] = $this->language->get('text_success');[m
+[32m+[m
+[32m+[m			[32m$url = '';[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['sort'])) {[m
+[32m+[m				[32m$url .= '&sort=' . $this->request->get['sort'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['order'])) {[m
+[32m+[m				[32m$url .= '&order=' . $this->request->get['order'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['page'])) {[m
+[32m+[m				[32m$url .= '&page=' . $this->request->get['page'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m$this->response->redirect($this->url->link('catalog/attribute', 'token=' . $this->session->data['token'] . $url, 'SSL'));[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$this->getForm();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic function edit() {[m
+[32m+[m		[32m$this->load->language('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32m$this->document->setTitle($this->language->get('heading_title'));[m
+[32m+[m
+[32m+[m		[32m$this->load->model('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32mif (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {[m
+[32m+[m			[32m$this->model_catalog_attribute->editAttribute($this->request->get['attribute_id'], $this->request->post);[m
+[32m+[m
+[32m+[m			[32m$this->session->data['success'] = $this->language->get('text_success');[m
+[32m+[m
+[32m+[m			[32m$url = '';[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['sort'])) {[m
+[32m+[m				[32m$url .= '&sort=' . $this->request->get['sort'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['order'])) {[m
+[32m+[m				[32m$url .= '&order=' . $this->request->get['order'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['page'])) {[m
+[32m+[m				[32m$url .= '&page=' . $this->request->get['page'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m$this->response->redirect($this->url->link('catalog/attribute', 'token=' . $this->session->data['token'] . $url, 'SSL'));[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$this->getForm();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic function delete() {[m
+[32m+[m		[32m$this->load->language('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32m$this->document->setTitle($this->language->get('heading_title'));[m
+[32m+[m
+[32m+[m		[32m$this->load->model('catalog/attribute');[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->post['selected']) && $this->validateDelete()) {[m
+[32m+[m			[32mforeach ($this->request->post['selected'] as $attribute_id) {[m
+[32m+[m				[32m$this->model_catalog_attribute->deleteAttribute($attribute_id);[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m$this->session->data['success'] = $this->language->get('text_success');[m
+[32m+[m
+[32m+[m			[32m$url = '';[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['sort'])) {[m
+[32m+[m				[32m$url .= '&sort=' . $this->request->get['sort'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['order'])) {[m
+[32m+[m				[32m$url .= '&order=' . $this->request->get['order'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif (isset($this->request->get['page'])) {[m
+[32m+[m				[32m$url .= '&page=' . $this->request->get['page'];[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m$this->response->redirect($this->url->link('catalog/attribute', 'token=' . $this->session->data['token'] . $url, 'SSL'));[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$this->getList();[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mprotected function getList() {[m
+[32m+[m		[32mif (isset($this->request->get['sort'])) {[m
+[32m+[m			[32m$sort = $this->request->get['sort'];[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$sort = 'ad.name';[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->get['order'])) {[m
+[32m+[m			[32m$order = $this->request->get['order'];[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$order = 'ASC';[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->get['page'])) {[m
+[32m+[m			[32m$page = $this->request->get['page'];[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$page = 1;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$url = '';[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->get['sort'])) {[m
+[32m+[m			[32m$url .= '&sort=' . $this->request->get['sort'];[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->get['order'])) {[m
+[32m+[m			[32m$url .= '&order=' . $this->request->get['order'];[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->get['page'])) {[m
+[32m+[m			[32m$url .= '&page=' . $this->request->get['page'];[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$data['breadcrumbs'] = array();[m
+[32m+[m
+[32m+[m		[32m$data['breadcrumbs'][] = array([m
+[32m+[m			[32m'text' => $this->language->get('text_home'),[m
+[32m+[m			[32m'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')[m
+[32m+[m		[32m);[m
+[32m+[m
+[32m+[m		[32m$data['breadcrumbs'][] = array([m
+[32m+[m			[32m'text' => $this->language->get('heading_title'),[m
+[32m+[m			[32m'href' => $this->url->link('catalog/attribute', 'token=' . $this->session->data['token'] . $url, 'SSL')[m
+[32m+[m		[32m);[m
+[32m+[m
+[32m+[m		[32m$data['add'] = $this->url->link('catalog/attribute/add', 'token=' . $this->session->data['token'] . $url, 'SSL');[m
+[32m+[m		[32m$data['delete'] = $this->url->link('catalog/attribute/delete', 'token=' . $this->session->data['token'] . $url, 'SSL');[m
+[32m+[m
+[32m+[m		[32m$data['attributes'] = array();[m
+[32m+[m
+[32m+[m		[32m$filter_data = array([m
+[32m+[m			[32m'sort'  => $sort,[m
+[32m+[m			[32m'order' => $order,[m
+[32m+[m			[32m'start' => ($page - 1) * $this->config->get('config_limit_admin'),[m
+[32m+[m			[32m'limit' => $this->config->get('config_limit_admin')[m
+[32m+[m		[32m);[m
+[32m+[m
+[32m+[m		[32m$attribute_total = $this->model_catalog_attribute->getTotalAttributes();[m
+[32m+[m
+[32m+[m		[32m$results = $this->model_catalog_attribute->getAttributes($filter_data);[m
+[32m+[m
+[32m+[m		[32mforeach ($results as $result) {[m
+[32m+[m			[32m$data['attributes'][] = array([m
+[32m+[m				[32m'attribute_id'    => $result['attribute_id'],[m
+[32m+[m				[32m'name'            => $result['name'],[m
+[32m+[m				[32m'attribute_group' => $result['attribute_group'],[m
+[32m+[m				[32m'sort_order'      => $result['sort_order'],[m
+[32m+[m				[32m'edit'            => $this->url->link('catalog/attribute/edit', 'token=' . $this->session->data['token'] . '&attribute_id=' . $result['attribute_id'] . $url, 'SSL')[m
+[32m+[m			[32m);[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$data['heading_title'] = $this->language->get('heading_title');[m
+[32m+[m
+[32m+[m		[32m$data['text_list'] = $this->language->get('text_list');[m
+[32m+[m		[32m$data['text_no_results'] = $this->language->get('text_no_results');[m
+[32m+[m		[32m$data['text_confirm'] = $this->language->get('text_confirm');[m
+[32m+[m
+[32m+[m		[32m$data['column_name'] = $this->language->get('column_name');[m
+[32m+[m		[32m$data['column_attribute_group'] = $this->language->get('column_attribute_group');[m
+[32m+[m		[32m$data['column_sort_order'] = $this->language->get('column_sort_order');[m
+[32m+[m		[32m$data['column_action'] = $this->language->get('column_action');[m
+[32m+[m
+[32m+[m		[32m$data['button_add'] = $this->language->get('button_add');[m
+[32m+[m		[32m$data['button_edit'] = $this->language->get('button_edit');[m
+[32m+[m		[32m$data['button_delete'] = $this->language->get('button_delete');[m
+[32m+[m
+[32m+[m		[32mif (isset($this->error['warning'])) {[m
+[32m+[m			[32m$data['error_warning'] = $this->error['warning'];[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$data['error_warning'] = '';[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mif (isset($this->session->data['success'])) {[m
+[32m+[m			[32m$data['success'] = $this->session->data['success'];[m
+[32m+[m
+[32m+[m			[32munset($this->session->data['success']);[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$data['success'] = '';[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32mif (isset($this->request->post['selected'])) {[m
+[32m+[m			[32m$data['selected'] = (array)$this->request->post['selected'];[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$data['selected'] = array();[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m$url = '';[m
+[32m+[m
+[32m+[m		[32mif ($order == 'ASC') {[m
+[32m+[m			[32m$url .= '&order=DESC';[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32m$url .= '&orde
