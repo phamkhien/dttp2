@@ -45,7 +45,7 @@ $productLayout = DIR_TEMPLATE.$objconfig->get('config_template').'/template/comm
         </div>
         <div class="tab-nav tabs-x tabs-<?php echo $tab_position;?>">
             <?php if($banner_position == 1){ ?>
-            <div class="banner-image hidden-md hidden-sm hidden-xs">
+            <div class="banner-image hidden-md hidden-sm hidden-xs k-img-banner">
                 <a class="img-banner" href="<?php echo $category_link; ?>" data-toggle="tab">
                     <?php if (!empty($image) ) { ?><img class="img-responsive" src="<?php echo $image;?>" alt="<?php echo $category_name; ?>"/><?php } ?>
                 </a>
@@ -55,7 +55,7 @@ $productLayout = DIR_TEMPLATE.$objconfig->get('config_template').'/template/comm
 
 
             <?php if($banner_position == 0){ ?>
-            <div class="banner-image hidden-md hidden-sm hidden-xs">
+            <div class="banner-image hidden-md hidden-sm hidden-xs k-img-banner">
                 <a class="img-banner" href="<?php echo $category_link; ?>" data-toggle="tab">
                     <?php if (!empty($image) ) { ?><img class="img-responsive" src="<?php echo $image;?>" alt="<?php echo $category_name; ?>"/><?php } ?>
                 </a>

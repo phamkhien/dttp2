@@ -9,8 +9,8 @@
 
 	$span = 12/$cols;
 	$active = 'latest';
-	$id = rand(1,9)+rand();
-
+	$id = 4545454545;
+	
 $themeConfig = (array)$configs->get('themecontrol');
 $listingConfig = array(
 'category_pzoom'                     => 1,
@@ -36,23 +36,19 @@ $listingConfig['product_layout'] = 'default';
 $productLayout = DIR_TEMPLATE.$configs->get('config_template').'/template/common/product/'.$listingConfig['product_layout'].'.tpl';
 
 ?>
-<div class="box producttabs box-center <?php echo $module_class;?> ">
+<div class="box producttabs box-center <?php echo $module_class;?>" style="padding-left:9px;" >
 <?php if( !empty($module_description) ) { ?>
  <div class="module-desc hidden">
 	<?php echo $module_description;?>
  </div>
  <?php } ?>
 
-<ul class="nav nav-pills box-heading" id="producttabs<?php echo $id;?>">
-    <?php foreach( $tabs as $tab => $products ) { if( empty($products) ){ continue;}  ?>
-         <li><a href="#tab-<?php echo $tab.$id;?>" data-toggle="tab"><?php echo $objlang->get('text_'.$tab)?></a></li>
-    <?php } ?>
-</ul>
+
 <div class="tab-content box-content">
     <?php foreach( $tabs as $tab => $products ) {
             if( empty($products) ){ continue;}
         ?>
-        <div class="tab-pane box-products  tabcarousel<?php echo $id; ?> slide" id="tab-<?php echo $tab.$id;?>">
+        <div class="tab-pane box-products  tabcarousel<?php echo $id; ?> slide" id="tab-<?php echo $tab.$id;?>" style="display:block;">
 
             <?php if( count($products) > $itemsperpage ) { ?>
             <div class="carousel-controls">

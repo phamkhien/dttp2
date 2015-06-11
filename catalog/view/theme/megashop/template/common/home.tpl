@@ -10,7 +10,7 @@
 
                 <section id="sidebar-main" class="col-md-<?php echo $SPAN[1];?>">
                     <div id="content"> 
-                        <?php echo $content_top; ?>
+                        <?php echo $content_top;  ?>
                         <?php echo $content_bottom; ?>
                     </div>
                 </section>

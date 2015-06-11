@@ -4563,6 +4563,7 @@ body[class*="-home"] #content {
 .product-block .images {
   position: relative;
   text-align: center;
+  //margin-bottom: -35px;
 }
 .product-block .images:hover .hover-image {
   opacity: 1;
@@ -4579,7 +4580,9 @@ body[class*="-home"] #content {
   visibility: hidden;
   opacity: 0;
 }
-
+.k-box-product-10{
+    padding-left: 10px;
+}
 .product-zoom {
   right: 50%;
 }
