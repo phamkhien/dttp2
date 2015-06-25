@@ -24,7 +24,7 @@ $objlang = $this->registry->get('language');
                            
                             <ul class="nav nav-pills box-heading" id="producttabs12546287958">
                                 
-                                <li class="active" style="padding:0px;"><a style="font-size:16px;" href="#tab-latest12546287958" data-toggle="tab"><strong>SẢN PHẨM MỚI NHẤT</strong></a></li>
+                                <li class="active" style="padding:0px;"><a style="font-size:14px;" href="#tab-latest12546287958" data-toggle="tab">SẢN PHẨM MỚI NHẤT</a></li>
                                
                             </ul>
                              </div>

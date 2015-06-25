@@ -3,13 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/module/pavverticalmenu/widgets/product.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/product/product_detail_default.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/product/category.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/block-footcols.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/product/product.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/block-outsite.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/default/template/product/product.tpl</file>
             <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/home.tpl</file>
-            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/module/pavbannerbuilder.tpl</file>
-            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/module/pavhomebuilder.tpl</file>
-            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/module/pavproducttabs.tpl</file>
-            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/module/pavverticalcategorytabs.tpl</file>
-            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/module/pavmegamenu/product.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/cuongnd/banggia.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/buttons.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/maintenance.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/header.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/controller/product/category.php</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/header_home2.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/controller/cuongnd/banggia.php</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/megashop/template/common/language.tpl</file>
+            <file>file:/var/www/html/dothotuongphat2/catalog/view/theme/default/template/product/category.tpl</file>
         </group>
     </open-files>
 </project-private>

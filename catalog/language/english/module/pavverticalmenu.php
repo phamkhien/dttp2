@@ -1,3 +1,3 @@
 <?php
-$_['text_catalog_menu'] = 'categories';
+$_['text_catalog_menu'] = 'Danh Mục';
 ?>

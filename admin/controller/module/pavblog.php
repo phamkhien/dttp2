@@ -475,7 +475,7 @@ class ControllerModulePavblog extends Controller {
 			$data = $this->model_pavblog_blog->getBlog( (int)$this->request->get['id'] );
 			$blog = array_merge( $blog, $data['blog'] );
 			if( $blog['image'] ){
-				$blog['thumb'] = $this->model_tool_image->resize($blog['image'], 500, 260);
+				$blog['thumb'] = $this->model_tool_image->resize($blog['image'], 180, 180);
 			}
 		}
 		$blog_descriptions = array();
